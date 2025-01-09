@@ -1,0 +1,9 @@
+Start::Submit:Submitted
+Start::(user.role=CXO):Submit->Approved
+Start::Submitted:Approve->Approved
+Start::Submitted:Reject->Rejected
+Start::Submitted::Approved:Publish->Published
+Start::Submitted::Rejected:Submit->Submitted
+Start::Submitted::Rejected::Submitted:Approve->Approved
+Start::Submitted::Rejected::Submitted::Published:Archive->Archived
+Start::Submitted::Approved::Published:Archive->Archived
